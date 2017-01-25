@@ -2,7 +2,7 @@
 //Document ready.
 $(document).on('turbolinks:load', function(){
   var theForm = $('#pro_form');
-  var submitBtn = $('#form-submit-btn');
+  var submitBtn = $('#form-signup-btn');
   
   //Set Stripe public key.
   Stripe.setPublishableKey( $('meta[name="stripe-key"]').attr('content'));
@@ -16,7 +16,7 @@ $(document).on('turbolinks:load', function(){
     
     //Collect the credit card fields.
     var ccNum = $('#card_number').val(), 
-        cvcNum = $('#card-code').val(),
+        cvcNum = $('#card_code').val(),
         expMonth = $('#card_month').val(),
         expYear = $('#card_year').val();
         
