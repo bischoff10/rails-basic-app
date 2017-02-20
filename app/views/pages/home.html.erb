@@ -25,10 +25,10 @@
         </div>
       </div>
     <% else %>
-      <div class="col-md-6">
+      <div class="col-md-6 col-md-offset-3">
         <div class="well">
           <h2 class="text-center">The Rules of Basic</h2>
-          <h4>Check out the rules of this site before signing up.</h4>
+          <h4 class="text-center">Check out the rules of this site before signing up.</h4>
           <br/>
           <%= link_to "The Rules", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
         </div>
