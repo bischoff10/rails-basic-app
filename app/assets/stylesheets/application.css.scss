@@ -21,21 +21,22 @@
 
 body {
   background-color: #303030;
+  h1, h2, h3 {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  }
+  
+  p {
+    color: white;
+  }
+  
+  ul {
+    color: white;
+  }
 } 
 
 //Typography Styles
-h1, h2, h3 {
-  font-family: 'Open Sans', sans-serif;
-  color: white;
-}
 
-p {
-  color: white;
-}
-
-ul {
-  color: white;
-}
 
 // Background Gradient
 .navbar, .home-callout {
@@ -105,4 +106,15 @@ ul {
 
 .home-sign-up-links {
   margin-top: 30px;
+}
+
+.well {
+  h1, h2, h3 {
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  }
+  
+  p {
+    color: black;
+  }
 }
