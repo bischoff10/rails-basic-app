@@ -19,9 +19,22 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
+body {
+  background-color: #303030;
+} 
+
 //Typography Styles
 h1, h2, h3 {
   font-family: 'Open Sans', sans-serif;
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+ul {
+  color: white;
 }
 
 // Background Gradient

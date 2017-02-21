@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resource :profile
   end
   get 'about', to: 'pages#about'
+  get 'rules', to: 'pages#rules'
   resources :contacts, only: :create
   get 'contact-us', to: 'contacts#new', as: 'new_contact'
 end
