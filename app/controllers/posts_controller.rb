@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
-  before_action :only_current_user
+  # before_action :only_current_user
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
@@ -22,7 +22,7 @@ class PostsController < ApplicationController
   # GET /posts/1/edit
   def edit
     # @user = User.find(params[:user_id])
-    # @post = @user.posts
+    # @post = @user.posts(:user_id)
   end
 
   # POST /posts
@@ -68,7 +68,7 @@ class PostsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
-      @post = Post.find(params[:user_id])
+      @post = Post.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
@@ -76,8 +76,8 @@ class PostsController < ApplicationController
       params.require(:post).permit(:body)
     end
     
-    def only_current_user
-      @user = User.find( params[:user_id] )
-      redirect_to(root_url) unless @user == current_user
-    end
+    # def only_current_user
+    #   @user = User.find( params[:user_id] )
+    #   redirect_to(root_url) unless @user == current_user
+    # end
 end
