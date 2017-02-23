@@ -6,12 +6,14 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @user = User.find(params[:user_id])
+    @posts = Post.where("user_id = ?", @user.id)
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @post = Post.find(params[:id])
   end
 
   # GET /posts/new
@@ -21,8 +23,8 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
-    @user = User.find(params[:user_id])
-    @post = @user.posts
+    # @user = User.find(params[:user_id])
+    # @post = @user.
   end
 
   # POST /posts
