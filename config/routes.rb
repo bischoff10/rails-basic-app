@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :users do
     resource :profile
     resources :posts
+    # resource :posts, only: :index
   end
   get 'about', to: 'pages#about'
   get 'rules', to: 'pages#rules'

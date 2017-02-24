@@ -1,3 +1,10 @@
+
+
+2/24/17
+I have created a new branch posts_user to mess around with what we've got working
+to try and get the index to show all posts from all users.
+
+
 Memberships
 * User should see link for Basic plan on home page
 * User should see link for Pro plan on home page
