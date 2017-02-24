@@ -1,8 +1,8 @@
 <div class="container">
   <h1>Editing Post</h1>
   
-  <%= render 'form', post: @post %>
+  <%= render 'form', url: user_post_path(user_id: @user.id, id: @post.id)%>
   
-  <%= link_to 'Show', @post %> |
-  <%= link_to 'Back', user_posts_path %>
+  <%= link_to 'Show', user_post_path(user_id: @user.id, id: @post.id) %> |
+  <%= link_to 'Back', user_post_path(user_id: @user.id) %>
 </div>

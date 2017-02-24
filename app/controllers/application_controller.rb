@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
   # from a Devise sign up form.
   before_action :configure_permitted_parameters, if: :devise_controller?
   
+  # def application
+  #   @user = User.find(params[:user_id])
+  # end
+  
   protected
     def configure_permitted_parameters
        devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:stripe_card_token, :email, :password, :password_confirmation) } 
