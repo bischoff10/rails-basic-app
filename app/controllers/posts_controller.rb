@@ -1,7 +1,12 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
-  before_action :only_current_user
+  before_action :only_current_user, except: :feed
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  
+  def feed
+    @posts = Post.all
+    @profile = Profile.all
+  end
 
   # GET /posts
   # GET /posts.json
